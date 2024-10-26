@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from "react"
 
 function App() {
+
+  const [nombre, setNombre] = useState("");
+  const [edad, setEdad] = useState(0);
+  const [pais, setPais] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [anios, setAnios] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Datos">
+        <label>Nombre: <input type="text"></input></label>
+        <label>Edad: <input type="number"></input></label>
+        <label>Pais: <input type="text"></input></label>
+        <label>Cargo: <input type="text"></input></label>
+        <label>Años: <input type="number"></input></label>
+        <button>Registrar</button>
+      </div>
     </div>
   );
 }
